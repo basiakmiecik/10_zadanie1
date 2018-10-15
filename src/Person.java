@@ -11,10 +11,12 @@ public class Person {
             this.firstName = firstName;
             this.lastName = lastName;
             }
-        if(age.equals("0")||age==null)
+        if(age.equals("0")||age==null||age.length()>3||age.equals(""))
             throw new IncorrectAgeException();
         else
             this.age = age;
+        if(!(pesel.length()==11))
+            throw new IncorrectPeselException();
         this.pesel = pesel;
     }
 
